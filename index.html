@@ -1,0 +1,21 @@
+<html lang="en">
+    <head>
+        <title>this is my title</title>
+    </head>
+
+    <body>
+        this is my body
+        <input type="text" id="input_text_01">this is my value</input>
+        <button id="btn_change_input_text_01_01">change input_text_01</button>
+
+        <script>
+            const INPUT_TEXT_01="input_text_01";
+            const BTN_CHANGE_INPUT_TEXT_01_01="btn_change_input_text_01_01"
+            const input_text_01 = document.getElementById(INPUT_TEXT_01);
+            const btn_change_input_text_01_01 = document.getElementById(BTN_CHANGE_INPUT_TEXT_01_01);
+            btn_change_input_text_01_01.addEventListener("click",()=>{
+                input_text_01.innerText="value is changed"
+            })
+        </script>
+    </body>
+</html>
