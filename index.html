@@ -5,7 +5,7 @@
 
     <body>
         this is my body
-        <input type="text" id="input_text_01">this is my value</input>
+        <input type="text" id="input_text_01" value="this is my value"></input>
         <button id="btn_change_input_text_01_01">change input_text_01</button>
 
         <script>
@@ -13,9 +13,17 @@
             const BTN_CHANGE_INPUT_TEXT_01_01="btn_change_input_text_01_01"
             const input_text_01 = document.getElementById(INPUT_TEXT_01);
             const btn_change_input_text_01_01 = document.getElementById(BTN_CHANGE_INPUT_TEXT_01_01);
-            btn_change_input_text_01_01.addEventListener("click",()=>{
-                input_text_01.innerText="value is changed"
-            })
+            btn_change_input_text_01_01.addEventListener("click",handleClickContainer);
+            let count = 0;
+            function handleClickContainer(){
+                handleClick();
+                handleClick();
+            }
+
+            function handleClick(){
+                count++
+                input_text_01.value = count;
+            }
         </script>
     </body>
 </html>
