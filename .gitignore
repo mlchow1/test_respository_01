@@ -1,0 +1,20 @@
+# Ignore any file ending in ".o" or ".a"
+*.[oa]
+
+# Ignore any file ending with "~"
+*~
+
+# Ignore log files
+*.log
+
+# only ignore the AAA file in the current directory, not subdir/AAA
+/AAA
+
+# ignore all files in any directory named BBB
+BBB/
+
+# ignore all .CCC files
+*.CCC
+
+# but do track lib.a, even though you're ignoring .CCC files above
+!lib.CCC
